@@ -48,6 +48,12 @@ class Light
         return $invalidUrls;
     }
 
+    /**
+     * @param $url
+     * @return int
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @author LiuTao liut1@haiweikexin.com
+     */
     protected function getStatusCodeForUrl($url)
     {
         $httpResponse = $this->httpClient->request('GET', $url);
